@@ -11,7 +11,6 @@ router.get('/seed', async (req, res) => {
 	res.json({ status: 200, data: genres });
 });
 
-
 //index route
 router.get('/', async (req, res) => {
     res.json(await Genre.find({}));
