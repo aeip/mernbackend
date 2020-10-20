@@ -3,22 +3,22 @@ const { Router } = require('express');
 const router = Router();
 
 //index route
-router.get('/', async (req, res) => {
+router.get('/movie', async (req, res) => {
 	res.json(await Movie.find({}));
 });
 
 //create route
-router.post('/', async (req, res) => {
+router.post('/movie', async (req, res) => {
 	res.json(await Movie.create(req.body));
 });
 
 //update route
-router.put('/:id', async (req, res) => {
+router.put('/movie/:id', async (req, res) => {
 	res.json(await Movie.findByIdAndUpdate(req.params.id, req.body, { new: true }));
 });
 
 //delete route
-router.delete('/:id', async (req, res) => {
+router.delete('/movie/:id', async (req, res) => {
 	res.json(await Movie.findByIdAndRemove(req.params.id));
 });
 

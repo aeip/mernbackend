@@ -8,5 +8,5 @@ const genreSchema = new Schema(
 	{ timestamps: true }
 );
 
-const Genre = model('movie', genreSchema);
+const Genre = model('genre', genreSchema);
 module.exports = Genre;
