@@ -10,8 +10,8 @@ router.get('/', async (req, res) => {
 
 //create route
 router.post('/', async (req, res) => {
-    // need to add the movie to the genre it belongs.
-	res.json(await Movie.create(req.body));
+    res.json(await Movie.create(req.body),
+             await Genre.findOneAndUpdate({name: req.body.genre}, movies.push(req.body._id)));
 });
 
 //update route
