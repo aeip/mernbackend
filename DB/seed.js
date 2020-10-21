@@ -10,7 +10,8 @@ Genre.find({}).remove(() => {
                 Movie.create({
                     title: "Hubie Halloween",
                     year: 2020,
-                    img: 'https://m.media-amazon.com/images/M/MV5BMTE0N2EyMzgtMWJhZS00ZWNmLThjZmQtMjcxYTk1NTJiMGVkXkEyXkFqcGdeQXVyNjY1MTg4Mzc@._V1_UY268_CR16,0,182,268_AL_.jpg'
+                    img: 'https://m.media-amazon.com/images/M/MV5BMTE0N2EyMzgtMWJhZS00ZWNmLThjZmQtMjcxYTk1NTJiMGVkXkEyXkFqcGdeQXVyNjY1MTg4Mzc@._V1_UY268_CR16,0,182,268_AL_.jpg',
+                    genre: 'comedy'
                 }).then(movie => {
                     genre.movies.push(movie)
                 })
@@ -26,7 +27,8 @@ Genre.find({}).remove(() => {
 							title: 'Tenet',
 							year: 2020,
 							img:
-								'https://m.media-amazon.com/images/M/MV5BYzg0NGM2NjAtNmIxOC00MDJmLTg5ZmYtYzM0MTE4NWE2NzlhXkEyXkFqcGdeQXVyMTA4NjE0NjEy._V1_UX182_CR0,0,182,268_AL_.jpg',
+                                'https://m.media-amazon.com/images/M/MV5BYzg0NGM2NjAtNmIxOC00MDJmLTg5ZmYtYzM0MTE4NWE2NzlhXkEyXkFqcGdeQXVyMTA4NjE0NjEy._V1_UX182_CR0,0,182,268_AL_.jpg',
+                    genre: 'scifi'
 						}).then((movie) => {
 							genre.movies.push(movie);
 						}),
@@ -43,6 +45,7 @@ Genre.find({}).remove(() => {
 							year: 2020,
 							img:
 								'https://m.media-amazon.com/images/M/MV5BZGJkMDRiOWUtZTMzZC00YzYzLWI1NDAtODc4ZGFiN2Q2MmJlXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_UY268_CR16,0,182,268_AL_.jpg',
+							genre: 'horror',
 						}).then((movie) => {
 							genre.movies.push(movie);
 						}),
@@ -59,6 +62,7 @@ Genre.find({}).remove(() => {
 							year: 2020,
 							img:
 								'https://m.media-amazon.com/images/M/MV5BN2UyNGM3MDUtMTIzZi00ZDdkLThlYTktYjk0ZDMzM2JiMjMyXkEyXkFqcGdeQXVyNzE0MjkxMzA@._V1_UX182_CR0,0,182,268_AL_.jpg',
+							genre: 'romance',
 						}).then((movie) => {
 							genre.movies.push(movie);
 						}),
@@ -75,6 +79,7 @@ Genre.find({}).remove(() => {
 							year: 2020,
 							img:
 								'https://m.media-amazon.com/images/M/MV5BOGU3NTFmNjYtODc3Ny00MWEzLWI3M2ItZjE3NDgwMTI0MzkzXkEyXkFqcGdeQXVyMTEyMjM2NDc2._V1_UX182_CR0,0,182,268_AL_.jpg',
+							genre: 'action',
 						}).then((movie) => {
 							genre.movies.push(movie);
 						}),
@@ -91,6 +96,7 @@ Genre.find({}).remove(() => {
 							year: 2020,
 							img:
 								'https://m.media-amazon.com/images/M/MV5BMTU4NzA4MDEwNF5BMl5BanBnXkFtZTgwMTQxODYzNjM@._V1_UX182_CR0,0,182,268_AL_.jpg',
+							genre: 'thriller',
 						}).then((movie) => {
 							genre.movies.push(movie);
 						}),
@@ -107,6 +113,7 @@ Genre.find({}).remove(() => {
 							year: 2020,
 							img:
 								'https://m.media-amazon.com/images/M/MV5BZjNkNzk0ZjEtM2M1ZC00MmMxLTlmOWEtNWRlZTc1ZTUyNzY4XkEyXkFqcGdeQXVyMTEyMjM2NDc2._V1_UX182_CR0,0,182,268_AL_.jpg',
+							genre: 'drama',
 						}).then((movie) => {
 							genre.movies.push(movie);
 						}),
@@ -123,6 +130,7 @@ Genre.find({}).remove(() => {
 							year: 2018,
 							img:
 								'https://m.media-amazon.com/images/M/MV5BY2I5NzM3Y2QtNGY4NS00Njg5LWI2OGYtZDhlN2UzOWJjMDUxXkEyXkFqcGdeQXVyODE0OTU5Nzg@._V1_UX182_CR0,0,182,268_AL_.jpg',
+							genre: 'mystery',
 						}).then((movie) => {
 							genre.movies.push(movie);
 						}),
@@ -139,6 +147,7 @@ Genre.find({}).remove(() => {
 							year: 2020,
 							img:
 								'https://m.media-amazon.com/images/M/MV5BZmE1NmVmN2EtMjZmZC00YzAyLWE4MWEtYjY5YmExMjUxODU1XkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_UX182_CR0,0,182,268_AL_.jpg',
+							genre: 'crime',
 						}).then((movie) => {
 							genre.movies.push(movie);
 						}),
@@ -154,7 +163,8 @@ Genre.find({}).remove(() => {
 							title: 'Soul',
 							year: 2020,
 							img:
-								'https://m.media-amazon.com/images/M/MV5BOWY1NWNiN2UtNGQ3Yy00ODNlLTgyMzItMzAxZWUxOWNkMjNjXkEyXkFqcGdeQXVyNzEzNjU1NDg@._V1_UY268_CR16,0,182,268_AL_.jpg',
+                                'https://m.media-amazon.com/images/M/MV5BOWY1NWNiN2UtNGQ3Yy00ODNlLTgyMzItMzAxZWUxOWNkMjNjXkEyXkFqcGdeQXVyNzEzNjU1NDg@._V1_UY268_CR16,0,182,268_AL_.jpg',
+                    genre: 'animation'
 						}).then((movie) => {
 							genre.movies.push(movie);
 						}),

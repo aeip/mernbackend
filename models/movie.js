@@ -3,7 +3,8 @@ const {Schema, model} = require('mongoose');
 const movieSchema = new Schema({
     title: String,
     year: Number,
-    img: String
+    img: String,
+    genre: String
 },
 {timestamps: true}
 );
