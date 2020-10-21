@@ -10,9 +10,13 @@ router.get('/', async (req, res) => {
 
 //create route
 router.post('/', async (req, res) => {
-    let movie = await Movie.create(req.body);
-    let genre = await Genre.findOneAndUpdate({name: req.body.genre}, movies.push(req.body._id))
-    res.json({movie, genre});
+    res.json(await Movie.create(req.body));
+    // let movie = await Movie.create(req.body);
+	// 	let genre = await Genre.findOneAndUpdate(
+	// 		{ name: req.body.genre },
+	// 		movies.push(req.body._id)
+	// 	);
+	// 	res.json({ movie, genre });
 });
 
 //update route
